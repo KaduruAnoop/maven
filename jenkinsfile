@@ -6,7 +6,7 @@ node('built-in')
     }
     stage('ContinuousBuild')
     {
-       sh 'mvn package' 
+       sh 'mvn package'
     }
     stage('ContinuousDeployment')
     {
@@ -19,6 +19,20 @@ node('built-in')
     }
     stage('ContinuousDelivery')
     {
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '52f332a6-1e3a-4e3a-bc5e-b9687f6174de', path: '', url: 'http://13.235.13.227:8080')], contextPath: 'prodapp', war: '**/*.war'
-    }
-}
+        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '52f332a6-1e3a-4e3a-bc5e-b9687f6174de', path: '', url: 'http://
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
