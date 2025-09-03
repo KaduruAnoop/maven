@@ -8,26 +8,7 @@ node('built-in')
     {
        sh 'mvn package'
     }
-    stage('ContinuousDeployment')
-    {
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '52f332a6-1e3a-4e3a-bc5e-b9687f6174de', path: '', url: 'http://43.205.210.104:8080')], contextPath: 'testapp', war: '**/*.war'
-    }
-    stage('ContinuousTesting')
-    {
-        git 'https://github.com/IntelliqDevops/FunctionalTesting.git'
-        sh '''java -jar /var/lib/jenkins/workspace/scriptedpipeline/testing.jar'''
-    }
-    stage('ContinuousDelivery')
-    {
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '52f332a6-1e3a-4e3a-bc5e-b9687f6174de', path: '', url: 'http://
-~
-~
-~
-~
-~
-~
-~
-~
+}
 ~
 ~
 ~
